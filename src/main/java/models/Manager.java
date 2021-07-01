@@ -2,13 +2,11 @@ package models;
 
 public class Manager extends Employee {
 
-	public Manager(String empName, int empID, String userName, String passWord) {
-		super(empName, empID, userName, passWord);
-		this.empName = empName;
-		this.empID = empID;
-		this.userName = userName;
-		this.passWord = passWord;
+	public Manager(String empName, int empID, String country) {
+		super(empName, country, empID, country);
+		// TODO Auto-generated constructor stub
 	}
-	
+
+
 	
 }

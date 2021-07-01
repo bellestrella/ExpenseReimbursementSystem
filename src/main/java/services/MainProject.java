@@ -1,10 +1,10 @@
 package services;
 
+
 public class MainProject {
-
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		ManagerServicesImp manager1 = new ManagerServicesImp();
+		manager1.viewAllEmployees();
+		System.out.println("Hello Me!");
 	}
-
 }

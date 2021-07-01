@@ -4,24 +4,31 @@ package models;
 import java.util.List;
 
 public class Employee {
-	protected String empName;
+	protected String firstName;
+	protected String lastName;
 	protected int empID;
-	protected String userName = "";
-	protected String passWord = "";
-	
-	public Employee(String empName, int empID, String userName, String passWord) {
+	protected String country;
+	//	protected String userName = "";
+	//	protected String passWord = "";
+	//	protected boolean isManager = false;
+	public Employee(String firstName, String lastName, int empID, String country) {
 		super();
-		this.empName = empName;
+		this.firstName = firstName;
+		this.lastName = lastName;
 		this.empID = empID;
-		this.userName = userName;
-		this.passWord = passWord;
+		this.country = country;
 	}
-	
-	public String getEmpName() {
-		return empName;
+	public String getFirstName() {
+		return firstName;
 	}
-	public void setEmpName(String empName) {
-		this.empName = empName;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 	public int getEmpID() {
 		return empID;
@@ -29,18 +36,14 @@ public class Employee {
 	public void setEmpID(int empID) {
 		this.empID = empID;
 	}
-	public String getUserName() {
-		return userName;
+	public String getCountry() {
+		return country;
 	}
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-	public String getPassWord() {
-		return passWord;
-	}
-	public void setPassWord(String passWord) {
-		this.passWord = passWord;
+	public void setCountry(String country) {
+		this.country = country;
 	}
 
 	
+
+
 }
