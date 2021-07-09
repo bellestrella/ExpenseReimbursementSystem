@@ -1,19 +1,39 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
-
+<?xml version="1.0" encoding="UTF-8"?>
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
-  
-<servlet>  
-<servlet-name>login</servlet-name>  				
-<servlet-class>LoginController</servlet-class>  	
-</servlet>  
-  
-<servlet-mapping>  
-<servlet-name>login</servlet-name>  				
-<url-pattern>/LoginController</url-pattern>  			
-</servlet-mapping>  
 
+	<welcome-file-list>
+		<welcome-file>login.html</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>login</servlet-name>
+		<servlet-class>servlet.LoginServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>login</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>viewInfo</servlet-name>
+		<servlet-class>servlet.ViewInfoServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>viewInfo</servlet-name>
+		<url-pattern>/viewinfo</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>LogoutServlet</servlet-name>
+		<servlet-class>LogoutServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LogoutServlet</servlet-name>
+		<url-pattern>/logout</url-pattern>
+	</servlet-mapping>
 
 </web-app>

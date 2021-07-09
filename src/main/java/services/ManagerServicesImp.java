@@ -32,7 +32,7 @@ public class ManagerServicesImp implements ManagerServices {
 	public void viewAllEmployees() {
 		System.out.print("Viewing all Employees\n");
 		
-		String QUERY = "select FirstName, LastName, EmpID, Country from Employee";
+		String QUERY = "select FirstName, LastName, EmpID, Country, username, pass_word from Employee";
 		try(Connection con = ConnectionUtil.getConnection();
 				Statement stmt = con.createStatement();			
 				ResultSet rs = stmt.executeQuery(QUERY))		
@@ -43,8 +43,11 @@ public class ManagerServicesImp implements ManagerServices {
 				String lastName = rs.getString("LastName");
 				int empID = rs.getInt("EmpID");
 				String country = rs.getString("Country");
-				System.out.println("Connection");
-				System.out.println(firstName + "," + lastName + "," + empID + "," + country);
+				String username = rs.getString("username");
+				String pw = rs.getString("pass_word");
+
+				System.out.println("\n|Name| " + firstName + " " + lastName + " |Employee ID| " + empID + 
+									" |Country| " + country + " |Username| " + username + " |Password| " + pw);
 			}//try
 		} catch (SQLException e) {e.printStackTrace(); }
 	}
