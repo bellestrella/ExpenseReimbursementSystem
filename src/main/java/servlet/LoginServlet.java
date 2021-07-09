@@ -37,13 +37,13 @@ public class LoginServlet extends HttpServlet {
 		super();
 	}
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		request.getRequestDispatcher("/login.html").forward(request, response);
 
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		response.setContentType("text/html");
@@ -64,6 +64,7 @@ public class LoginServlet extends HttpServlet {
 		//.info does not display anything to the console
 
 		logger.info("Attempting to validate credentials.......");
+
 		try {
 			if (ld.validate(emp)) {
 				response.sendRedirect("employeeHomepage.html");
