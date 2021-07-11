@@ -2,13 +2,16 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Success</title>
+<title>Employee Homepage</title>
 </head>
 
 <body>
 	<h1>Employee Homepage</h1>
 	<form action="/projectone/viewinfo" method="post">
-		<input type="submit" value="View Employee Information" />
+		<input type="submit" value="View Employee Information" /> <br>
+		<br>
+		<button type="button" onclick="document.getElementById('demo').innerHTML = Date()"> Display Date and Time.</button>
+		<p id="demo"></p>
 		<br>
 		<a href="login">Logout</a>
 	</form>
