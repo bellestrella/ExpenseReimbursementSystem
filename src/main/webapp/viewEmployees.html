@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee Information</title>
+</head>
+<body>
+	<h1>Viewing Employee Information</h1>
+	<div id="allEmployees"></div>
+	    <script>
+        fetch('empJSON.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+        function appendData(data) {
+            var mainContainer = document.getElementById("allEmployees");
+            for (var i = 0; i < data.length; i++) {
+                var div = document.createElement("div");
+                div.innerHTML = 'Name: ' + data[i].FirstName + ' ' + data[i].LastName + ' Employee ID: ' + data[i].EmpID + ' Country: ' + data[i].Country + ' Pending Requests: ' + data[i].PendingRequests;
+                mainContainer.appendChild(div);
+            }
+        }
+    </script>
+</body>
+</html>
