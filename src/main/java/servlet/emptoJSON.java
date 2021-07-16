@@ -26,7 +26,7 @@ public class emptoJSON {
 	    try {
 	    	System.out.println("Did the try work?");
 	    	PreparedStatement preparedStatement = con.prepareStatement("SELECT * FROM Employees ORDER BY EmpID");
-	        // The integers correspond to the question marks in the query
+
 	        ResultSet rs = preparedStatement.executeQuery();
 	        //status = rs.next();
 	        

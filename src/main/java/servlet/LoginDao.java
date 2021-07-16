@@ -10,8 +10,19 @@ import java.sql.SQLException;
 
 
 
+/**
+ * @author Belle
+ *
+ */
 public class LoginDao {
 
+    /**
+     * @param emp
+     * @return
+     * @throws ClassNotFoundException
+     * Validate will confirm wether the credentials passed are in fact in the
+     * database table acquired from the connection
+     */
     public boolean validate(Employee emp) throws ClassNotFoundException {
         boolean status = false;
         Connection con = ConnectionUtil.getConnection();

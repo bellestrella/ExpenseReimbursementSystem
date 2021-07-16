@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import models.Employee;
-import models.Requests;
+
 
 public class ManagerServicesImp implements ManagerServices {
 
@@ -52,28 +52,5 @@ public class ManagerServicesImp implements ManagerServices {
 		} catch (SQLException e) {e.printStackTrace(); }
 	}
 
-	@Override
-	public Requests viewAllPendingRequests() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Requests viewSinglePendingRequest(Employee e) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Requests approveOrDenyRequest(Employee e) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Requests viewAllResolvedRequests() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 }

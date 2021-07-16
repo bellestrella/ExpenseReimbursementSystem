@@ -25,6 +25,10 @@ import org.apache.logging.log4j.Logger;
 
 
 //@WebServlet("/login")
+/**
+ * @author Belle
+ *
+ */
 public class LoginServlet extends HttpServlet {
 
 	private static Logger logger = LogManager.getLogger(LoginServlet.class);
@@ -43,6 +47,11 @@ public class LoginServlet extends HttpServlet {
 
 	}
 
+	/**
+	 * This method will retrieve the credentials passed by the user, validate them
+	 * and if correct, will redirect to the proper page. Otherwise, the user must
+	 * attempt again.
+	 */
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 

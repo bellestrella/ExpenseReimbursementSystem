@@ -2,30 +2,18 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
 <title>Employee Information</title>
 </head>
 <body>
-	<h1>Viewing Employee Information</h1>
+	<h1><font color=pink>Viewing Employee Information</font></h1>
 	<div id="allEmployees"></div>
-	    <script>
-        fetch('empJSON.json')
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (data) {
-                appendData(data);
-            })
-            .catch(function (err) {
-                console.log('error: ' + err);
-            });
-        function appendData(data) {
-            var mainContainer = document.getElementById("allEmployees");
-            for (var i = 0; i < data.length; i++) {
-                var div = document.createElement("div");
-                div.innerHTML = 'Name: ' + data[i].FirstName + ' ' + data[i].LastName + ' Employee ID: ' + data[i].EmpID + ' Country: ' + data[i].Country + ' Pending Requests: ' + data[i].PendingRequests;
-                mainContainer.appendChild(div);
-            }
-        }
-    </script>
+	<br>
+	<a class="btn btn-primary" href="login" role="button">Logout</a>
+<script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>
+
